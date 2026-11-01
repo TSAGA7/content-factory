@@ -1,0 +1,22 @@
+project_id = "gpnpqwyniqmdinwazegh"
+
+# Single deployment used in production: /functions/v1/cf/<route>
+[functions.cf]
+verify_jwt = false
+import_map = "./functions/deno.json"
+
+# The same handlers can be deployed separately if preferred.
+[functions.publish-worker]
+verify_jwt = false
+import_map = "./functions/deno.json"
+[functions.maintenance]
+verify_jwt = false
+import_map = "./functions/deno.json"
+[functions.posts-schedule]
+import_map = "./functions/deno.json"
+[functions.ai-generate]
+import_map = "./functions/deno.json"
+[functions.accounts-connect]
+import_map = "./functions/deno.json"
+[functions.app-settings]
+import_map = "./functions/deno.json"
